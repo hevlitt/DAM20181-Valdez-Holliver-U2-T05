@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Curp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <h1>Resultados</h1>
+  <ion-card *ngIf="data.si">
+    <ion-card-header>
+      Hombre
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <button ion-item>Barba</button>
+        <button ion-item>Bigote</button>
+        <button ion-item>Fuerte</button>
+        <button ion-item>Feo</button>
+        <button ion-item>Formal</button>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="!data.si">
+    <ion-card-header>
+      Mujer
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <button ion-item>Bonita</button>
+        <button ion-item>Pelo Largo</button>
+        <button ion-item>Inteligente</button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <div>
+    <button ion-button primary block (click)="back()">Regresar </button>
+  </div>
+</ion-content>
